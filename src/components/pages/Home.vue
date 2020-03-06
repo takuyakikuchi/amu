@@ -1,22 +1,28 @@
 <template>
-  <div id="home-slide">
-    <div id="home-message">
-      <h1>Welcome to amu</h1>
-      <p>お客様の「なりたい」を一緒に叶えます</p>
-    </div>
+  <div id="home-background">
+    <Nav />
+    <HomeMessage />
+    <ScrollDown />
   </div>
 </template>
 
 <script>
+import HomeMessage from '../modules/HomeMessage.vue'
+import Nav from '../modules/Nav.vue'
+import ScrollDown from '../modules/ScrollDown.vue'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeMessage,
+    Nav,
+    ScrollDown
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  /* ------------ Background picuture slide ------------- */
-  #home-slide {
+  #home-background {
     width: 100%;
     height: 100vh;
     animation: home-background 60s linear 6s infinite;
@@ -45,24 +51,6 @@ export default {
     }
     100% {
       background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)), url( '../../assets/home_4.jpg') no-repeat center/cover;
-    }
-  }
-  /* ------------- Title ---------------- */
-  #home-message {
-    color: rgb(255, 255, 255, 0.8);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    text-align: center;
-    animation: welcome 5s linear;
-  }
-  @keyframes welcome{
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.8;
     }
   }
 </style>
