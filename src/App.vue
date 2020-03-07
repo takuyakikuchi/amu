@@ -1,6 +1,16 @@
 <template>
   <div id="app">
-    <Home />
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section">
+        <Home />
+      </div>
+      <div class="section" style="color: white;">
+        Second section ...
+      </div>
+      <div class="section" style="color: white;">
+        Third section ...
+      </div>
+    </full-page>
   </div>
 </template>
 
