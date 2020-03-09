@@ -4,8 +4,8 @@
       <div class="section">
         <Home />
       </div>
-      <div class="section" style="color: white;">
-        Second section ...
+      <div class="section">
+        <Menu />
       </div>
       <div class="section" style="color: white;">
         Third section ...
@@ -15,12 +15,14 @@
 </template>
 
 <script>
-import Home from './components/pages/Home.vue'
+import Home from './components/pages/Home.vue';
+import Menu from './components/pages/Menu.vue';
 
 export default {
   name: 'App',
   components: {
-    Home
+    Home,
+    Menu
   }
 }
 </script>
@@ -34,5 +36,10 @@ export default {
     width: 100%;
     height: 100vh;
     background-color: #000;
+  }
+  .mobile-container {
+    width: 350px;
+    height: 100vh;
+    margin: auto;
   }
 </style>
