@@ -41,5 +41,7 @@ export default {
     width: 350px;
     height: 100vh;
     margin: auto;
+    display: flex;
+    align-items: center;
   }
 </style>

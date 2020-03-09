@@ -32,16 +32,19 @@
         </tbody>
       </table>
     </div>
+    <ScrollDown />
   </div>
 </template>
 
 <script>
 import Nav from '../modules/Nav.vue';
+import ScrollDown from '../modules/ScrollDown.vue';
 
 export default {
   name: 'Menu',
   components: {
-    Nav
+    Nav,
+    ScrollDown
   }
 }
 </script>
