@@ -7,8 +7,8 @@
       <div class="section">
         <Menu />
       </div>
-      <div class="section" style="color: white;">
-        Third section ...
+      <div class="section">
+        <Gallery />
       </div>
     </full-page>
   </div>
@@ -17,12 +17,14 @@
 <script>
 import Home from './components/pages/Home.vue';
 import Menu from './components/pages/Menu.vue';
+import Gallery from './components/pages/Gallery.vue';
 
 export default {
   name: 'App',
   components: {
     Home,
-    Menu
+    Menu,
+    Gallery
   }
 }
 </script>
