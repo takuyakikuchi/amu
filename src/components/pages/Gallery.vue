@@ -1,32 +1,40 @@
 <template>
   <div>
-    <Nav />
-    <!-- Gallery grid -->
+    <!-- <Nav /> -->
     <div id="gallery">
-      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="image-item">
+      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="image-item" @click="showModal">
       <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="image-item">
       <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="image-item">
       <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="image-item">
       <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="image-item">
       <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="image-item">
     </div>
-    <!-- The modal -->
-    <div class="modal">
-      <img class="modal-content" src="../../assets/gallery_1.jpg" alt="gallery 1">
-    </div>
+    <GalleryModal v-show="modal"/>
     <ScrollDown />
   </div>
 </template>
 
 <script>
-import Nav from '../modules/Nav.vue';
+// import Nav from '../modules/Nav.vue';
 import ScrollDown from '../modules/ScrollDown.vue';
+import GalleryModal from '../modules/GalleryModal.vue';
 
 export default {
   name: 'Gallery',
   components: {
-    Nav,
-    ScrollDown
+    // Nav,
+    ScrollDown,
+    GalleryModal
+  },
+  data() {
+    return {
+      modal: false
+    }
+  },
+  methods: {
+    showModal() {
+      this.modal = true
+    }
   }
 }
 </script>
@@ -51,7 +59,6 @@ export default {
     opacity: 0.7;
   }
   .modal {
-    /* display: none; */
     position: absolute;
     z-index: 1;
     left: 0;
@@ -66,7 +73,7 @@ export default {
     margin: auto;
     display: block;
     width: 80%;
-    height: 60vh;
+    height: 50vh;
     border-radius: 5px;
   }
 </style>
