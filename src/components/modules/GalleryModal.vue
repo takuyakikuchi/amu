@@ -1,6 +1,6 @@
 <template>
   <div class="modal" v-show="!hide">
-    <Close @click.native="hideModal"></Close>
+    <Close @click.native="$emit('hideModal')"></Close>
     <img class="modal-content" src="../../assets/gallery_1.jpg" alt="gallery 1">
   </div>
 </template>
@@ -12,16 +12,6 @@
     name: 'GalleryModal',
     components: {
       Close
-    },
-    data() {
-      return {
-        hide: false
-      }
-    },
-    methods: {
-      hideModal() {
-        this.hide = true;
-      }
     }
   }
 </script>

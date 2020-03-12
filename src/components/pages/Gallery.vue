@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- <Nav /> -->
-    <div id="gallery">
-      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="image-item" @click="showModal">
-      <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="image-item">
-      <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="image-item">
-      <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="image-item">
-      <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="image-item">
-      <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="image-item">
+    <div id="gallery-container">
+      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="img-card" @click="showModal">
+      <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="img-card">
+      <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="img-card">
+      <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="img-card">
+      <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="img-card">
+      <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card">
     </div>
-    <GalleryModal v-show="modal"/>
+    <GalleryModal @hideModal="modal = false" v-show="modal"/>
     <ScrollDown />
   </div>
 </template>
@@ -35,19 +35,22 @@ export default {
     showModal() {
       this.modal = true
     }
+  },
+  created() {
+    this.$on(this.modal = false);
   }
 }
 </script>
   
 <style scoped>
-  #gallery {
+  #gallery-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 8px;
     grid-row-gap: 10px;
   }
-  .image-item {
+  .img-card {
     height: 200px;
     width: 180px;
     place-self: center;
@@ -55,7 +58,7 @@ export default {
     cursor: pointer;
     transition: 300ms;
   }
-  .image-item:hover {
+  .img-card:hover {
     opacity: 0.7;
   }
   .modal {
