@@ -1,7 +1,8 @@
 <template>
   <div class="modal" v-show="!hide">
     <Close @click.native="$emit('hideModal')"></Close>
-    <img class="modal-content" src="../../assets/gallery_1.jpg" alt="gallery 1">
+    <img class="modal-content" :src="targetSrc">
+    <p>{{ id }}</p>
   </div>
 </template>
 
@@ -9,6 +10,12 @@
   import Close from '../modules/Close.vue';
 
   export default {
+    props: ['id'],
+    computed: {
+      targetSrc() {
+        return require(`../../assets/gallery_${parseInt(this.id)}.jpg`);
+      }
+    },
     name: 'GalleryModal',
     components: {
       Close

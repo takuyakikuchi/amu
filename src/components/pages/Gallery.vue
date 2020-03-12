@@ -2,14 +2,14 @@
   <div>
     <!-- <Nav /> -->
     <div id="gallery-container">
-      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="img-card" @click="showModal">
-      <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="img-card">
-      <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="img-card">
-      <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="img-card">
-      <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="img-card">
-      <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card">
+      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="img-card" @click="showModal(1)">
+      <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="img-card" @click="showModal(2)">
+      <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="img-card" @click="showModal(3)">
+      <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="img-card" @click="showModal(4)">
+      <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="img-card" @click="showModal(5)">
+      <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card" @click="showModal(6)">
     </div>
-    <GalleryModal @hideModal="modal = false" v-show="modal"/>
+    <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
     <ScrollDown />
   </div>
 </template>
@@ -28,16 +28,18 @@ export default {
   },
   data() {
     return {
-      modal: false
+      modalShow: false,
+      id: 1
     }
   },
   methods: {
-    showModal() {
-      this.modal = true
+    showModal(id) {
+      this.id = id;
+      this.modalShow = true
     }
   },
   created() {
-    this.$on(this.modal = false);
+    this.$on(this.modalShow = false);
   }
 }
 </script>
