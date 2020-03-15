@@ -1,5 +1,5 @@
 <template>
-  <i class="fas fa-angle-double-down"></i>
+  <i class="fas fa-angle-double-down" @click="$emit('scrollDown')"></i>
 </template>
 
 <script>

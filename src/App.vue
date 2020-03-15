@@ -2,16 +2,16 @@
   <div id="app">
     <full-page ref="fullpage" :options="options" id="fullpage">
       <div class="section">
-        <Home />
+        <Home @scrollDown="scrollDown" />
       </div>
       <div class="section">
-        <Menu />
+        <Menu @scrollDown="scrollDown" />
       </div>
       <div class="section">
-        <Gallery />
+        <Gallery @scrollDown="scrollDown" />
       </div>
       <div class="section">
-        <Staff />
+        <Staff @scrollDown="scrollDown" />
       </div>
       <div class="section">
         <About />
@@ -35,6 +35,20 @@ export default {
     Gallery,
     Staff,
     About
+  },
+  data() {
+    return {
+      options: {
+        licenseKey: "YOUR_KEY_HEERE",
+        menu: "#menu",
+        anchors: ["page1", "page2", "page3", "page4", "page5"]
+      }
+    };
+  },
+  methods: {
+    scrollDown() {
+      this.$refs.fullpage.api.moveSectionDown();
+    }
   }
 };
 </script>

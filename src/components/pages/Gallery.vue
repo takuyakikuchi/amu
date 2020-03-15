@@ -10,7 +10,7 @@
       <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card" @click="showModal(6)" />
     </div>
     <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
-    <ScrollDown />
+    <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
 

@@ -5,7 +5,7 @@
       <h1>Welcome to amu</h1>
       <p>お客様の「なりたい」を一緒に叶えます</p>
     </div>
-    <ScrollDown v-show="!welcome" />
+    <ScrollDown v-show="!welcome" @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
 

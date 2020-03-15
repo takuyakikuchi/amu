@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <ScrollDown />
+    <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
 

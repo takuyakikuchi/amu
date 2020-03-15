@@ -3,10 +3,21 @@
     <i class="fas fa-bars" @click="show = !show"></i>
     <div class="menu-mobile" v-if="show">
       <ul>
-        <li>amu</li>
-        <li>menu</li>
-        <li>gallery</li>
-        <li>staff</li>
+        <li>
+          <a href="#page1">amu</a>
+        </li>
+        <li>
+          <a href="#page2">menu</a>
+        </li>
+        <li>
+          <a href="#page3">gallery</a>
+        </li>
+        <li>
+          <a href="#page4">staff</a>
+        </li>
+        <li>
+          <a href="#page5">about</a>
+        </li>
         <li>booking</li>
       </ul>
     </div>
@@ -43,14 +54,24 @@ i {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.8);
-}
-.menu-mobile ul {
-  width: 100%;
-  text-align: center;
-  list-style: none;
-}
-li {
-  font-size: 24px;
-  margin: 8px 0;
+  ul {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+  li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    &:hover {
+      font-size: 1.3rem;
+    }
+  }
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+  }
 }
 </style>
