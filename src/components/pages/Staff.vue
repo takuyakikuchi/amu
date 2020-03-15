@@ -53,33 +53,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.mobile-container {
-  flex-direction: column;
-}
 #staff-background {
-  width: 100%;
-  height: 100vh;
   background-color: #bfb8a0;
-}
-.staff {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin: 8px;
-  padding: 8px;
-  font-size: 0.8rem;
-}
-.staff-img {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  border-radius: 50%;
-}
-.staff-profile {
-  margin-left: 16px;
-}
-.staff-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  .mobile-container {
+    flex-direction: column;
+  }
+  .staff {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 8px;
+    padding: 8px;
+    font-size: 0.8rem;
+    .staff-img {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50%;
+    }
+    .staff-profile {
+      margin-left: 16px;
+    }
+    .staff-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
 }
 </style>

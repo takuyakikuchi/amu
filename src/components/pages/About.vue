@@ -1,5 +1,5 @@
 <template>
-  <div id="about-background">
+  <div class="background-slide">
     <Nav />
     <div class="mobile-container">
       <div id="salon-info">
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#about-background {
+.background-slide {
   width: 100%;
   height: 100vh;
   animation: background-slide 60s linear infinite;

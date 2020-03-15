@@ -51,11 +51,9 @@ export default {
 
 <style scoped lang="scss">
 #menu-background {
-  width: 100%;
-  height: 100vh;
   background-color: #bfb8a0;
-}
-table {
-  margin: auto;
+  table {
+    margin: auto;
+  }
 }
 </style>

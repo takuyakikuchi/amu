@@ -1,5 +1,5 @@
 <template>
-  <div id="home-background">
+  <div class="background-slide">
     <Nav />
     <HomeMessage />
     <ScrollDown />
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#home-background {
+.background-slide {
   width: 100%;
   height: 100vh;
   animation: background-slide 60s linear 6s infinite;

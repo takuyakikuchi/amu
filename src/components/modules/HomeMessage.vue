@@ -31,7 +31,7 @@ export default {
 
 <style scoped lang="scss">
 .home-message {
-  color: rgb(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

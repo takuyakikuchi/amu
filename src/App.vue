@@ -48,13 +48,13 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #000;
-}
-.mobile-container {
-  width: 350px;
-  height: 100vh;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .mobile-container {
+    width: 350px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>
