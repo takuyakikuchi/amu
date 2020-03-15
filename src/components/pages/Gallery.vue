@@ -76,7 +76,7 @@ export default {
 };
 </script>
   
-<style scoped>
+<style scoped lang="scss">
 .responsive-container {
   align-content: center;
 }

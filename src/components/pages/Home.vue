@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #home-background {
   width: 100%;
   height: 100vh;

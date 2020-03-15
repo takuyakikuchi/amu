@@ -37,25 +37,25 @@
 </template>
 
 <script>
-import Nav from '../modules/Nav.vue';
-import ScrollDown from '../modules/ScrollDown.vue';
+import Nav from "../modules/Nav.vue";
+import ScrollDown from "../modules/ScrollDown.vue";
 
 export default {
-  name: 'Menu',
+  name: "Menu",
   components: {
     Nav,
     ScrollDown
   }
-}
+};
 </script>
 
-<style scoped>
-  #menu-background {
-    width: 100%;
-    height: 100vh;
-    background-color: #BFB8A0;
-  }
-  table {
-    margin: auto;
-  }
+<style scoped lang="scss">
+#menu-background {
+  width: 100%;
+  height: 100vh;
+  background-color: #bfb8a0;
+}
+table {
+  margin: auto;
+}
 </style>
