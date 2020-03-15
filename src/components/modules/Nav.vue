@@ -32,15 +32,6 @@ i {
   top: 16px;
   right: 16px;
   z-index: 2;
-  animation: wait 5s linear 6s;
-}
-@keyframes wait {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.8;
-  }
 }
 .menu-mobile {
   width: 50%;

@@ -1,22 +1,41 @@
 <template>
   <div class="background-slide">
-    <Nav />
-    <HomeMessage />
-    <ScrollDown />
+    <Nav v-show="!welcome" />
+    <div class="home-message" v-if="welcome">
+      <h1>Welcome to amu</h1>
+      <p>お客様の「なりたい」を一緒に叶えます</p>
+    </div>
+    <div class="home-message" v-else>
+      <h1>amu</h1>
+    </div>
+    <ScrollDown v-show="!welcome" />
   </div>
 </template>
 
 <script>
-import HomeMessage from "../modules/HomeMessage.vue";
 import Nav from "../modules/Nav.vue";
 import ScrollDown from "../modules/ScrollDown.vue";
 
 export default {
   name: "Home",
   components: {
-    HomeMessage,
     Nav,
     ScrollDown
+  },
+  data: function() {
+    return {
+      welcome: true
+    };
+  },
+  methods: {
+    switchMessage() {
+      setTimeout(() => {
+        this.welcome = false;
+      }, 6000);
+    }
+  },
+  beforeMount() {
+    this.switchMessage();
   }
 };
 </script>
@@ -59,6 +78,23 @@ export default {
   100% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
       url("../../assets/home_4.jpg") no-repeat center/cover;
+  }
+}
+.home-message {
+  color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  animation: welcome 5s linear;
+}
+@keyframes welcome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
   }
 }
 </style>
