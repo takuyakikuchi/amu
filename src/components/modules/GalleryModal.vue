@@ -34,13 +34,13 @@ export default {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
-}
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  height: 50vh;
-  border-radius: 5px;
-  max-width: 415px;
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 50vh;
+    border-radius: 5px;
+    max-width: 415px;
+  }
 }
 </style>

@@ -1,12 +1,9 @@
 <template>
-  <div class="background-slide">
+  <div id="home">
     <Nav v-show="!welcome" />
     <div class="home-message" v-if="welcome">
       <h1>Welcome to amu</h1>
       <p>お客様の「なりたい」を一緒に叶えます</p>
-    </div>
-    <div class="home-message" v-else>
-      <h1>amu</h1>
     </div>
     <ScrollDown v-show="!welcome" />
   </div>
@@ -41,60 +38,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.background-slide {
+#home {
   width: 100%;
   height: 100vh;
-  animation: background-slide 60s linear 6s infinite;
-}
-@keyframes background-slide {
-  0% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_1.jpg") no-repeat center/cover;
-  }
-  25% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_1.jpg") no-repeat center/cover;
-  }
-  25.01% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_2.jpg") no-repeat center/cover;
-  }
-  50% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_2.jpg") no-repeat center/cover;
-  }
-  50.01% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_3.jpg") no-repeat center/cover;
-  }
-  75% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_3.jpg") no-repeat center/cover;
-  }
-  75.01% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_4.jpg") no-repeat center/cover;
-  }
-  100% {
-    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home_4.jpg") no-repeat center/cover;
+  animation: background-wait 5s forwards 4s;
+  max-width: 500px;
+  margin: auto;
+  .home-message {
+    color: rgba(255, 255, 255, 0.8);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    animation: welcome 5s forwards;
   }
 }
-.home-message {
-  color: rgba(255, 255, 255, 0.8);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  text-align: center;
-  animation: welcome 5s linear;
+@keyframes background-wait {
+  from {
+    background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
+      url("../../assets/home.gif") no-repeat center/cover;
+    opacity: 0;
+  }
+  to {
+    background: linear-gradient(rgba(83, 57, 49, 0.1), rgba(47, 23, 15, 0.8)),
+      url("../../assets/home.gif") no-repeat center/cover;
+    opacity: 1;
+  }
 }
+
 @keyframes welcome {
   from {
     opacity: 0;
   }
+  70% {
+    opacity: 0.6;
+  }
   to {
-    opacity: 0.8;
+    opacity: 0;
   }
 }
 </style>

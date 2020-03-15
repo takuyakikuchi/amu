@@ -51,6 +51,7 @@ export default {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   .img-card {
+    opacity: 0.8;
     width: 100%;
     height: 33vh;
     place-self: center;
