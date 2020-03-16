@@ -54,6 +54,9 @@ export default {
   background-color: #bfb8a0;
   table {
     margin: auto;
+    th {
+      padding-bottom: 10px;
+    }
   }
 }
 </style>

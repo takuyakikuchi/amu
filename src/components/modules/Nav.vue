@@ -1,7 +1,7 @@
 <template>
   <div>
     <i class="fas fa-bars" @click="show = !show"></i>
-    <div class="menu-mobile" v-if="show">
+    <div class="menu" v-if="show">
       <ul>
         <li>
           <a href="#page1">amu</a>
@@ -44,8 +44,9 @@ i {
   right: 16px;
   z-index: 2;
 }
-.menu-mobile {
+.menu {
   width: 50%;
+  max-width: 300px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

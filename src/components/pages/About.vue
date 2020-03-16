@@ -94,5 +94,13 @@ export default {
   padding: 16px;
   border-radius: 5px;
   height: 70vh;
+  width: 100%;
+  table {
+    width: 100%;
+    margin: 0 10px;
+    th {
+      padding-bottom: 30px;
+    }
+  }
 }
 </style>
