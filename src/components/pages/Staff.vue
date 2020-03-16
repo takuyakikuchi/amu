@@ -1,6 +1,6 @@
 <template>
   <div id="staff-background">
-    <Nav />
+    <Nav @showBooking="$emit('showBooking')" />
     <div class="mobile-container">
       <div class="staff">
         <img class="staff-img" src="../../assets/staff_1.jpg" />

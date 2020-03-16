@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Nav />
+    <Nav @showBooking="$emit('showBooking')" />
     <div id="gallery-container">
       <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="img-card" @click="showModal(1)" />
       <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="img-card" @click="showModal(2)" />

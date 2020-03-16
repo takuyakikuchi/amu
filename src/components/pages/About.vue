@@ -1,6 +1,6 @@
 <template>
   <div class="background-slide">
-    <Nav />
+    <Nav @showBooking="$emit('showBooking')" />
     <div class="mobile-container">
       <div id="salon-info">
         <table>

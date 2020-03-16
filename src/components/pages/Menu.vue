@@ -1,6 +1,6 @@
 <template>
   <div id="menu-background">
-    <Nav />
+    <Nav @showBooking="$emit('showBooking')" />
     <div class="mobile-container">
       <table>
         <thead>

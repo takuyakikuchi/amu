@@ -18,7 +18,7 @@
         <li>
           <a href="#page5">about</a>
         </li>
-        <li>booking</li>
+        <li @click="$emit('showBooking')">booking</li>
       </ul>
     </div>
   </div>

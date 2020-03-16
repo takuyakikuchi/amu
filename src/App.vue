@@ -2,21 +2,22 @@
   <div id="app">
     <full-page ref="fullpage" :options="options" id="fullpage">
       <div class="section">
-        <Home @scrollDown="scrollDown" />
+        <Home @scrollDown="scrollDown" @showBooking="bookingShow=true" />
       </div>
       <div class="section">
-        <Menu @scrollDown="scrollDown" />
+        <Menu @scrollDown="scrollDown" @showBooking="bookingShow=true" />
       </div>
       <div class="section">
-        <Gallery @scrollDown="scrollDown" />
+        <Gallery @scrollDown="scrollDown" @showBooking="bookingShow=true" />
       </div>
       <div class="section">
-        <Staff @scrollDown="scrollDown" />
+        <Staff @scrollDown="scrollDown" @showBooking="bookingShow=true" />
       </div>
       <div class="section">
-        <About />
+        <About @showBooking="bookingShow=true" />
       </div>
     </full-page>
+    <Booking @hideBooking="bookingShow=false" v-show="bookingShow" />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Menu from "./components/pages/Menu.vue";
 import Gallery from "./components/pages/Gallery.vue";
 import Staff from "./components/pages/Staff.vue";
 import About from "./components/pages/About.vue";
+import Booking from "./components/modules/Booking.vue";
 
 export default {
   name: "App",
@@ -34,14 +36,16 @@ export default {
     Menu,
     Gallery,
     Staff,
-    About
+    About,
+    Booking
   },
   data() {
     return {
       options: {
         licenseKey: "YOUR_KEY_HEERE",
         anchors: ["page1", "page2", "page3", "page4", "page5"]
-      }
+      },
+      bookingShow: false
     };
   },
   methods: {
