@@ -73,5 +73,37 @@ body {
     justify-content: center;
     align-items: center;
   }
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
+.fp-viewing-page1 {
+  #page1 {
+    color: rgb(250, 196, 196);
+  }
+}
+.fp-viewing-page2 {
+  #page2 {
+    color: rgb(250, 196, 196);
+  }
+}
+.fp-viewing-page3 {
+  #page3 {
+    color: rgb(250, 196, 196);
+  }
+}
+.fp-viewing-page4 {
+  #page4 {
+    color: rgb(250, 196, 196);
+  }
+}
+.fp-viewing-page5 {
+  #page5 {
+    color: rgb(250, 196, 196);
+  }
 }
 </style>

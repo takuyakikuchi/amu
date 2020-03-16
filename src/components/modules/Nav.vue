@@ -1,22 +1,22 @@
 <template>
   <div>
     <i class="fas fa-bars" @click="show = !show"></i>
-    <div class="menu" v-if="show">
+    <div class="menu" v-show="show">
       <ul>
         <li>
-          <a href="#page1">amu</a>
+          <a href="#page1" id="page1">amu</a>
         </li>
         <li>
-          <a href="#page2">menu</a>
+          <a href="#page2" id="page2">menu</a>
         </li>
         <li>
-          <a href="#page3">gallery</a>
+          <a href="#page3" id="page3">gallery</a>
         </li>
         <li>
-          <a href="#page4">staff</a>
+          <a href="#page4" id="page4">staff</a>
         </li>
         <li>
-          <a href="#page5">about</a>
+          <a href="#page5" id="page5">about</a>
         </li>
         <li @click="$emit('showBooking')">booking</li>
       </ul>
@@ -51,6 +51,7 @@ i {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   right: 0;
+  top: 0;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -59,19 +60,12 @@ i {
     width: 100%;
     text-align: center;
     list-style: none;
-  }
-  li {
-    font-size: 1.2rem;
-    margin: 15px 0;
-    &:hover {
-      font-size: 1.3rem;
-    }
-  }
-  a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    &:visited {
-      text-decoration: none;
+    li {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      &:hover {
+        font-size: 1.3rem;
+      }
     }
   }
 }
