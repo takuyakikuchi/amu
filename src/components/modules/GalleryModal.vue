@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" v-show="!hide">
+  <div class="modal">
     <Close @click.native="$emit('hideModal')"></Close>
     <img class="modal-content" :src="targetSrc" />
     <p>{{ id }}</p>

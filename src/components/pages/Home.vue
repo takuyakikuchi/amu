@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <Nav v-show="!welcome" />
-    <div class="home-message" v-if="welcome">
+    <div class="home-message" v-show="welcome">
       <h1>Welcome to amu</h1>
       <p>お客様の「なりたい」を一緒に叶えます</p>
     </div>
