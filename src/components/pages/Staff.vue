@@ -1,38 +1,18 @@
 <template>
-  <div id="staff-background">
+  <div>
     <Nav @showBooking="$emit('showBooking')" />
-    <div class="mobile-container">
-      <div class="staff">
-        <img class="staff-img" src="../../assets/staff_1.jpg" />
-        <div class="staff-profile">
-          <p class="staff-name">Tom</p>
-          <p>Owner</p>
-          <p>お客様に良い時間を過ごしていただけるように精一杯サービスいたします</p>
-        </div>
+    <div id="staff-fullpage">
+      <div class="staff-banner" id="staff1">
+        <p class="staff-name">Tom</p>
       </div>
-      <div class="staff">
-        <img class="staff-img" src="../../assets/staff_2.jpg" />
-        <div class="staff-profile">
-          <p class="staff-name">Sabrina</p>
-          <p>Chief</p>
-          <p>お客様とのコミュニケーションを大事に</p>
-        </div>
+      <div class="staff-banner" id="staff2">
+        <p class="staff-name">Sabrina</p>
       </div>
-      <div class="staff">
-        <img class="staff-img" src="../../assets/staff_3.jpg" />
-        <div class="staff-profile">
-          <p class="staff-name">Sara</p>
-          <p>Stylist</p>
-          <p>お客様と一緒に作るヘアスタイル</p>
-        </div>
+      <div class="staff-banner" id="staff3">
+        <p class="staff-name">Laura</p>
       </div>
-      <div class="staff">
-        <img class="staff-img" src="../../assets/staff_4.jpg" />
-        <div class="staff-profile">
-          <p class="staff-name">Noah</p>
-          <p>Stylist</p>
-          <p>抜群のスタイルを</p>
-        </div>
+      <div class="staff-banner" id="staff4">
+        <p class="staff-name">Noah</p>
       </div>
     </div>
     <ScrollDown @scrollDown="$emit('scrollDown')" />
@@ -53,30 +33,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#staff-background {
-  background-color: #bfb8a0;
-  .mobile-container {
-    flex-direction: column;
-  }
-  .staff {
-    display: flex;
+#staff-fullpage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .staff-banner {
     width: 100%;
-    align-items: center;
-    margin: 8px;
-    padding: 8px;
-    font-size: 0.8rem;
-    .staff-img {
-      width: 100px;
-      height: 100px;
-      background-color: black;
-      border-radius: 50%;
-    }
-    .staff-profile {
-      margin-left: 16px;
-    }
+    flex-grow: 1;
+    opacity: 0.9;
+    display: flex;
+    align-items: flex-end;
     .staff-name {
-      font-size: 1.5rem;
-      font-weight: bold;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 5px;
+      font-size: 1.2rem;
+    }
+  }
+  #staff1 {
+    background: url(../../assets/staff1_bg.jpg) center/cover no-repeat;
+  }
+  #staff2 {
+    background: url(../../assets/staff2_bg.jpg) center/cover no-repeat;
+  }
+  #staff3 {
+    background: url(../../assets/staff3_bg.jpg) center/cover no-repeat;
+  }
+  #staff4 {
+    background: url(../../assets/staff4_bg.jpg) center/cover no-repeat;
+  }
+}
+@media (min-width: 992px) {
+  #staff-fullpage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    .staff-banner {
+      width: 100%;
+      height: 100vh;
     }
   }
 }
