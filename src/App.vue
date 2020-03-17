@@ -82,27 +82,27 @@ body {
   }
 }
 .fp-viewing-page1 {
-  #page1 {
+  #nav-page1 {
     color: rgb(250, 196, 196);
   }
 }
 .fp-viewing-page2 {
-  #page2 {
+  #nav-page2 {
     color: rgb(250, 196, 196);
   }
 }
 .fp-viewing-page3 {
-  #page3 {
+  #nav-page3 {
     color: rgb(250, 196, 196);
   }
 }
 .fp-viewing-page4 {
-  #page4 {
+  #nav-page4 {
     color: rgb(250, 196, 196);
   }
 }
 .fp-viewing-page5 {
-  #page5 {
+  #nav-page5 {
     color: rgb(250, 196, 196);
   }
 }

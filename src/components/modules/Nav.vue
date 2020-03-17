@@ -4,19 +4,19 @@
     <div class="menu" v-show="show">
       <ul>
         <li>
-          <a href="#page1" id="page1">amu</a>
+          <a href="#page1" id="nav-page1">amu</a>
         </li>
         <li>
-          <a href="#page2" id="page2">menu</a>
+          <a href="#page2" id="nav-page2">menu</a>
         </li>
         <li>
-          <a href="#page3" id="page3">gallery</a>
+          <a href="#page3" id="nav-page3">gallery</a>
         </li>
         <li>
-          <a href="#page4" id="page4">staff</a>
+          <a href="#page4" id="nav-page4">staff</a>
         </li>
         <li>
-          <a href="#page5" id="page5">about</a>
+          <a href="#page5" id="nav-page5">about</a>
         </li>
         <li @click="$emit('showBooking')">booking</li>
       </ul>
