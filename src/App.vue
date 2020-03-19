@@ -73,37 +73,14 @@ body {
     justify-content: center;
     align-items: center;
   }
-  a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    &:visited {
-      text-decoration: none;
+}
+
+$pages: "home", "menu", "gallery", "staff", "about";
+@each $page in $pages {
+  .fp-viewing-#{$page} {
+    #nav-#{$page} {
+      color: rgb(250, 196, 196);
     }
-  }
-}
-.fp-viewing-home {
-  #nav-home {
-    color: rgb(250, 196, 196);
-  }
-}
-.fp-viewing-menu {
-  #nav-menu {
-    color: rgb(250, 196, 196);
-  }
-}
-.fp-viewing-gallery {
-  #nav-gallery {
-    color: rgb(250, 196, 196);
-  }
-}
-.fp-viewing-staff {
-  #nav-staff {
-    color: rgb(250, 196, 196);
-  }
-}
-.fp-viewing-about {
-  #nav-about {
-    color: rgb(250, 196, 196);
   }
 }
 </style>

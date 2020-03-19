@@ -67,6 +67,13 @@ i {
         font-size: 1.3rem;
       }
     }
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      &:visited {
+        text-decoration: none;
+      }
+    }
   }
 }
 </style>
