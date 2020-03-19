@@ -43,7 +43,7 @@ export default {
     return {
       options: {
         licenseKey: "YOUR_KEY_HEERE",
-        anchors: ["page1", "page2", "page3", "page4", "page5"]
+        anchors: ["home", "menu", "gallery", "staff", "about"]
       },
       bookingShow: false
     };
@@ -81,28 +81,28 @@ body {
     }
   }
 }
-.fp-viewing-page1 {
-  #nav-page1 {
+.fp-viewing-home {
+  #nav-home {
     color: rgb(250, 196, 196);
   }
 }
-.fp-viewing-page2 {
-  #nav-page2 {
+.fp-viewing-menu {
+  #nav-menu {
     color: rgb(250, 196, 196);
   }
 }
-.fp-viewing-page3 {
-  #nav-page3 {
+.fp-viewing-gallery {
+  #nav-gallery {
     color: rgb(250, 196, 196);
   }
 }
-.fp-viewing-page4 {
-  #nav-page4 {
+.fp-viewing-staff {
+  #nav-staff {
     color: rgb(250, 196, 196);
   }
 }
-.fp-viewing-page5 {
-  #nav-page5 {
+.fp-viewing-about {
+  #nav-about {
     color: rgb(250, 196, 196);
   }
 }
