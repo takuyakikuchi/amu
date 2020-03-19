@@ -20,7 +20,15 @@
             </tr>
             <tr>
               <td>住所</td>
-              <td>山梨県甲府市xxxx ビル2F</td>
+              <td>
+                <a
+                  href="https://www.google.com/maps/place/amu/@35.66123,138.5771753,17z/data=!3m1!4b1!4m5!3m4!1s0x601bf9bf527d0d73:0x99379e68d0fb53c6!8m2!3d35.66123!4d138.579364"
+                  target="_blank"
+                >
+                  山梨県甲府市xxxx ビル2F
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </td>
             </tr>
             <tr>
               <td>TEL</td>

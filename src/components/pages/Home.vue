@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home-background">
     <Nav v-show="!welcome" @showBooking="$emit('showBooking')" />
     <div class="home-message" v-show="welcome">
       <h1>Welcome to amu</h1>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#home {
+#home-background {
   width: 100%;
   height: 100vh;
   animation: background-wait 5s forwards 4s;

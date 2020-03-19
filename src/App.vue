@@ -73,6 +73,13 @@ body {
     justify-content: center;
     align-items: center;
   }
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+  }
 }
 
 $pages: "home", "menu", "gallery", "staff", "about";
