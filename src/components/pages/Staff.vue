@@ -44,6 +44,7 @@ export default {
     opacity: 0.9;
     display: flex;
     align-items: flex-end;
+    filter: grayscale(1);
     .staff-name {
       color: rgba(255, 255, 255, 0.8);
       margin: 5px;
@@ -51,16 +52,16 @@ export default {
     }
   }
   #staff1 {
-    background: url(../../assets/staff1_bg.jpg) center/cover no-repeat;
+    background: url(../../assets/staff-bg-1.jpg) center/cover no-repeat;
   }
   #staff2 {
-    background: url(../../assets/staff2_bg.jpg) center/cover no-repeat;
+    background: url(../../assets/staff-bg-2.jpg) center/cover no-repeat;
   }
   #staff3 {
-    background: url(../../assets/staff3_bg.jpg) center/cover no-repeat;
+    background: url(../../assets/staff-bg-3.jpg) center/cover no-repeat;
   }
   #staff4 {
-    background: url(../../assets/staff4_bg.jpg) center/cover no-repeat;
+    background: url(../../assets/staff-bg-4.jpg) center/cover no-repeat;
   }
 }
 @media (min-width: 992px) {
