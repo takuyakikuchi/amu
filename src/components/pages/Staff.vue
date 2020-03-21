@@ -2,19 +2,20 @@
   <div>
     <Nav @showBooking="$emit('showBooking')" />
     <div id="staff-fullpage">
-      <div class="staff-banner" id="staff1">
+      <div class="staff-banner" id="staff1" @click="showModal(1)">
         <p class="staff-name">Tom</p>
       </div>
-      <div class="staff-banner" id="staff2">
+      <div class="staff-banner" id="staff2" @click="showModal(2)">
         <p class="staff-name">Sabrina</p>
       </div>
-      <div class="staff-banner" id="staff3">
+      <div class="staff-banner" id="staff3" @click="showModal(3)">
         <p class="staff-name">Laura</p>
       </div>
-      <div class="staff-banner" id="staff4">
+      <div class="staff-banner" id="staff4" @click="showModal(4)">
         <p class="staff-name">Noah</p>
       </div>
     </div>
+    <StaffModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
     <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
@@ -22,12 +23,26 @@
 <script>
 import Nav from "../modules/Nav.vue";
 import ScrollDown from "../modules/ScrollDown.vue";
+import StaffModal from "../modules/StaffModal.vue";
 
 export default {
   name: "Staff",
   components: {
     Nav,
-    ScrollDown
+    ScrollDown,
+    StaffModal
+  },
+  data() {
+    return {
+      modalShow: false,
+      id: 1
+    };
+  },
+  methods: {
+    showModal(id) {
+      this.id = id;
+      this.modalShow = true;
+    }
   }
 };
 </script>
