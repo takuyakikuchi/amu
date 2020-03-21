@@ -2,20 +2,20 @@
   <div>
     <Nav @showBooking="$emit('showBooking')" />
     <div id="staff-fullpage">
-      <div class="staff-banner" id="staff1" @click="showModal(1)">
+      <div class="staff-banner" id="staff1" @click="showModal(0)">
         <p class="staff-name">Tom</p>
       </div>
-      <div class="staff-banner" id="staff2" @click="showModal(2)">
+      <div class="staff-banner" id="staff2" @click="showModal(1)">
         <p class="staff-name">Sabrina</p>
       </div>
-      <div class="staff-banner" id="staff3" @click="showModal(3)">
+      <div class="staff-banner" id="staff3" @click="showModal(2)">
         <p class="staff-name">Laura</p>
       </div>
-      <div class="staff-banner" id="staff4" @click="showModal(4)">
+      <div class="staff-banner" id="staff4" @click="showModal(3)">
         <p class="staff-name">Noah</p>
       </div>
     </div>
-    <StaffModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
+    <StaffModal @hideModal="modalShow = false" v-show="modalShow" :staff="selectedStaff" />
     <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
@@ -35,12 +35,41 @@ export default {
   data() {
     return {
       modalShow: false,
-      id: 1
+      selectedStaff: {},
+      staffs: [
+        {
+          name: "Tom",
+          position: "Owner",
+          comment: "Be happy!",
+          img: "staff_1"
+        },
+        {
+          name: "Sabrina",
+          position: "Chief",
+          comment: "Be beautiful!",
+          img: "staff_2"
+        },
+        {
+          name: "Laura",
+          position: "Stylist",
+          comment: "Be healthy!",
+          img: "staff_3"
+        },
+        {
+          name: "Noah",
+          position: "Stylist",
+          comment: "Be wild!",
+          img: "staff_4"
+        }
+      ]
     };
   },
+  created() {
+    this.selectedStaff = this.staffs[0];
+  },
   methods: {
-    showModal(id) {
-      this.id = id;
+    showModal(index) {
+      this.selectedStaff = this.staffs[index];
       this.modalShow = true;
     }
   }

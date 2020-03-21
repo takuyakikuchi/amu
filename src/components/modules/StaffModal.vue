@@ -19,10 +19,10 @@
 import Close from "../modules/Close.vue";
 
 export default {
-  props: ["id"],
+  props: ["staff"],
   computed: {
     targetSrc() {
-      return require(`../../assets/staff_${parseInt(this.id)}.jpg`);
+      return require(`../../assets/${this.staff.img}.jpg`);
     }
   },
   name: "StaffModal",
