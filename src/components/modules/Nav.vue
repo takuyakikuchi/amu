@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i class="fas fa-bars" @click="show = !show"></i>
+    <i class="fas fa-bars" @click="toggleNav"></i>
     <div class="menu" v-show="show">
       <ul>
         <li>
@@ -27,10 +27,15 @@
 <script>
 export default {
   name: "Nav",
-  data: function() {
-    return {
-      show: false
-    };
+  methods: {
+    toggleNav() {
+      this.$store.dispatch("toggleNav");
+    }
+  },
+  computed: {
+    show() {
+      return this.$store.getters.navOpen;
+    }
   }
 };
 </script>
