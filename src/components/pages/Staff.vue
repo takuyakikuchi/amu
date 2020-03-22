@@ -69,6 +69,7 @@ export default {
   },
   methods: {
     showModal(index) {
+      console.log();
       this.selectedStaff = this.staffs[index];
       this.modalShow = true;
     }

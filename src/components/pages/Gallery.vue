@@ -2,17 +2,16 @@
   <div>
     <Nav @showBooking="$emit('showBooking')" />
     <div id="gallery-container">
-      <img src="../../assets/gallery_1.jpg" alt="gallery 1" class="img-card" @click="showModal(1)" />
-      <img src="../../assets/gallery_2.jpg" alt="gallery 2" class="img-card" @click="showModal(2)" />
-      <img src="../../assets/gallery_3.jpg" alt="gallery 3" class="img-card" @click="showModal(3)" />
-      <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="img-card" @click="showModal(4)" />
-      <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="img-card" @click="showModal(5)" />
-      <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card" @click="showModal(6)" />
-      <img src="../../assets/gallery_7.jpg" alt="gallery 7" class="img-card" @click="showModal(7)" />
-      <img src="../../assets/gallery_8.jpg" alt="gallery 8" class="img-card" @click="showModal(8)" />
-      <img src="../../assets/gallery_9.jpg" alt="gallery 9" class="img-card" @click="showModal(9)" />
+      <img
+        v-for="image in images"
+        :key="image.name"
+        :src="image.src"
+        :alt="image.alt"
+        class="img-card"
+        @click="showModal"
+      />
     </div>
-    <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
+    <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :image="selectedImage" />
     <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
 </template>
@@ -32,16 +31,84 @@ export default {
   data() {
     return {
       modalShow: false,
-      id: 1
+      selectedImage: {},
+      images: [
+        {
+          name: "gallery_1",
+          src: require("../../assets/gallery_1.jpg"),
+          alt: "gallery_1",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_2",
+          src: require("../../assets/gallery_2.jpg"),
+          alt: "gallery_2",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_3",
+          src: require("../../assets/gallery_3.jpg"),
+          alt: "gallery_3",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_4",
+          src: require("../../assets/gallery_4.jpg"),
+          alt: "gallery_4",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_5",
+          src: require("../../assets/gallery_5.jpg"),
+          alt: "gallery_5",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_6",
+          src: require("../../assets/gallery_6.jpg"),
+          alt: "gallery_6",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_7",
+          src: require("../../assets/gallery_7.jpg"),
+          alt: "gallery_7",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_8",
+          src: require("../../assets/gallery_8.jpg"),
+          alt: "gallery_8",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_9",
+          src: require("../../assets/gallery_9.jpg"),
+          alt: "gallery_9",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        }
+      ]
     };
   },
   methods: {
-    showModal(id) {
-      this.id = id;
+    showModal(event) {
+      this.selectedImage = this.images.filter(image => {
+        return image.alt === event.target.alt;
+      })[0];
       this.modalShow = true;
     }
   },
   created() {
+    this.selectedImage = this.images[0];
     this.$on((this.modalShow = false));
   }
 };

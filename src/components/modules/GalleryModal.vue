@@ -9,10 +9,10 @@
 import Close from "../modules/Close.vue";
 
 export default {
-  props: ["id"],
+  props: ["image"],
   computed: {
     targetSrc() {
-      return require(`../../assets/gallery_${parseInt(this.id)}.jpg`);
+      return require(`../../assets/${this.image.name}.jpg`);
     }
   },
   name: "GalleryModal",
