@@ -43,7 +43,8 @@ export default {
     return {
       options: {
         licenseKey: "YOUR_KEY_HEERE",
-        anchors: ["home", "menu", "gallery", "staff", "about"]
+        anchors: ["home", "menu", "gallery", "staff", "about"],
+        scrollOverflow: true
       },
       bookingShow: false
     };

@@ -8,6 +8,9 @@
       <img src="../../assets/gallery_4.jpg" alt="gallery 4" class="img-card" @click="showModal(4)" />
       <img src="../../assets/gallery_5.jpg" alt="gallery 5" class="img-card" @click="showModal(5)" />
       <img src="../../assets/gallery_6.jpg" alt="gallery 6" class="img-card" @click="showModal(6)" />
+      <img src="../../assets/gallery_7.jpg" alt="gallery 7" class="img-card" @click="showModal(7)" />
+      <img src="../../assets/gallery_8.jpg" alt="gallery 8" class="img-card" @click="showModal(8)" />
+      <img src="../../assets/gallery_9.jpg" alt="gallery 9" class="img-card" @click="showModal(9)" />
     </div>
     <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :id="id" />
     <ScrollDown @scrollDown="$emit('scrollDown')" />
