@@ -1,7 +1,13 @@
 <template>
   <div class="modal">
     <Close @click.native="$emit('hideModal')"></Close>
-    <img class="modal-content" :src="targetSrc" />
+    <div class="model">
+      <img class="model-img" :src="targetSrc" />
+      <div class="model-info">
+        <p class="model-stylist">Stylist: {{image.stylist}}</p>
+        <p class="model-comment">{{image.comment}}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,16 +36,28 @@ export default {
   top: 0;
   width: 100%;
   height: 100vh;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
-  .modal-content {
-    margin: auto;
-    display: block;
+  justify-content: center;
+  align-items: center;
+  .model {
     width: 80%;
+    max-width: 415px;
+  }
+  .model-img {
+    width: 100%;
     height: 50vh;
     border-radius: 5px;
-    max-width: 415px;
+  }
+  .model-info {
+    width: 100%;
+    height: 30vh;
+    border-radius: 5px;
+    background-color: rgba(191, 184, 160, 0.7);
+    text-align: center;
+    p {
+      padding: 25px 0;
+    }
   }
 }
 </style>
