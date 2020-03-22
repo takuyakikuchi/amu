@@ -6,10 +6,9 @@
         <img :src="targetSrc" />
       </div>
       <div class="staff-profile">
-        <p>name: Tom</p>
-        <p>position: Owner</p>
-        <p>hobbies: Photo</p>
-        <p>Comment: Be happy!</p>
+        <p>name: {{staff.name}}</p>
+        <p>position: {{staff.position}}</p>
+        <p>Comment: {{staff.comment}}</p>
       </div>
     </div>
   </div>
