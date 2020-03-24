@@ -18,7 +18,7 @@ export default {
   props: ["image"],
   computed: {
     targetSrc() {
-      return require(`../../assets/${this.image.name}.jpg`);
+      return require(`../../assets/${this.image.name}.jpg?nf_resize=smartcrop&w=10&h=10`);
     }
   },
   name: "GalleryModal",
