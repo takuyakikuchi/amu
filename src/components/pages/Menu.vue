@@ -31,7 +31,7 @@
           </tr>
         </tbody>
       </table>
-      <img src="../../assets/staff_1.jpg?nf_resize=smartcrop&w=200&h=300" alt="test" />
+      <img src="../../assets/staff_1.jpg?nf_resize=smartcrop&w=300&h=300" alt="test" />
     </div>
     <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
