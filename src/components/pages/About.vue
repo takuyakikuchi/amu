@@ -65,7 +65,8 @@ export default {
 @keyframes background-slide {
   0% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/about_1.jpg") no-repeat center/cover;
+      url("../../assets/about_1.jpg?nf_resize=smartcrop&w=1200&h=800") no-repeat
+        center/cover;
   }
   25% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
