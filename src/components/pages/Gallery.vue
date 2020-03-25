@@ -35,7 +35,7 @@ export default {
       images: [
         {
           name: "gallery_1",
-          src: require("../../assets/gallery_1.jpg?nf_resize=smartcrop&w=200&h=300"),
+          src: require("../../assets/gallery_1.jpg"),
           alt: "gallery_1",
           stylist: "Tom",
           comment: "Permed beautifully."

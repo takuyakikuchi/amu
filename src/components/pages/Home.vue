@@ -57,14 +57,12 @@ export default {
 @keyframes background-wait {
   from {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("../../assets/home.gif?nf_resize=smartcrop&w=500&h=800") no-repeat
-        center/cover;
+      url("../../assets/home.gif") no-repeat center/cover;
     opacity: 0;
   }
   to {
     background: linear-gradient(rgba(83, 57, 49, 0.1), rgba(47, 23, 15, 0.8)),
-      url("../../assets/home.gif?nf_resize=smartcrop&w=500&h=800") no-repeat
-        center/cover;
+      url("../../assets/home.gif") no-repeat center/cover;
     opacity: 1;
   }
 }
