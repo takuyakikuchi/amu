@@ -86,7 +86,6 @@ export default {
   .staff-banner {
     width: 100%;
     flex-grow: 1;
-    opacity: 0.9;
     display: flex;
     align-items: flex-end;
     filter: grayscale(1);
@@ -97,16 +96,17 @@ export default {
     }
   }
   #staff1 {
-    background: url(../../assets/staff-bg-1.jpg) center/cover no-repeat;
+    background: url(https://res.cloudinary.com/dmxwje5he/image/upload/c_scale,f_auto,o_80,q_auto,w_992/v1585126259/amu/staff-bg-1.jpg)
+      center/cover no-repeat;
   }
   #staff2 {
-    background: url(../../assets/staff-bg-2.jpg) center/cover no-repeat;
+    background: url(https://res.cloudinary.com/dmxwje5he/image/upload/c_scale,f_auto,o_80,q_auto,w_992/v1585126258/amu/staff-bg-2.jpg) center/cover no-repeat;
   }
   #staff3 {
-    background: url(../../assets/staff-bg-3.jpg) center/cover no-repeat;
+    background: url(https://res.cloudinary.com/dmxwje5he/image/upload/c_scale,f_auto,o_80,q_auto,w_992/v1585126246/amu/staff-bg-3.jpg) center/cover no-repeat;
   }
   #staff4 {
-    background: url(../../assets/staff-bg-4.jpg) center/cover no-repeat;
+    background: url(https://res.cloudinary.com/dmxwje5he/image/upload/c_scale,f_auto,o_80,q_auto,w_992/v1585126256/amu/staff-bg-4.jpg) center/cover no-repeat;
   }
 }
 @media (min-width: 992px) {
