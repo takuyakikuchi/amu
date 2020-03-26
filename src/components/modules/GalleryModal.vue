@@ -2,7 +2,18 @@
   <div class="modal">
     <Close @click.native="$emit('hideModal')"></Close>
     <div class="model">
-      <img class="model-img" :src="targetSrc" />
+      <div class="model-img">
+        <cld-image :publicId="targetSrc">
+          <cld-transformation
+            width="180"
+            height="250"
+            gravity="faces"
+            crop="fill"
+            quality="auto"
+            fetchFormat="auto"
+          />
+        </cld-image>
+      </div>
       <div class="model-info">
         <p class="model-stylist">Stylist: {{image.stylist}}</p>
         <p class="model-comment">{{image.comment}}</p>
@@ -18,7 +29,7 @@ export default {
   props: ["image"],
   computed: {
     targetSrc() {
-      return require(`../../assets/${this.image.name}.jpg`);
+      return this.image.src;
     }
   },
   name: "GalleryModal",

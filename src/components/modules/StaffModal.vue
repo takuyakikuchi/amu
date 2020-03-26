@@ -3,7 +3,10 @@
     <Close @click.native="$emit('hideModal')"></Close>
     <div class="staff-card">
       <div class="staff-img">
-        <img :src="targetSrc" />
+        <cld-image :publicId="targetSrc">
+          <cld-transformation radius="max" />
+          <cld-transformation height="160" crop="scale" />
+        </cld-image>
       </div>
       <div class="staff-profile">
         <p>name: {{staff.name}}</p>
@@ -21,7 +24,7 @@ export default {
   props: ["staff"],
   computed: {
     targetSrc() {
-      return require(`../../assets/${this.staff.img}.jpg`);
+      return `amu/${this.staff.img}`;
     }
   },
   name: "StaffModal",
@@ -55,8 +58,6 @@ export default {
     text-align: center;
     padding: 20px;
     img {
-      width: 160px;
-      height: 160px;
       border-radius: 50%;
     }
   }

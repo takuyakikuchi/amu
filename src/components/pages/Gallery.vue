@@ -2,14 +2,18 @@
   <div>
     <Nav @showBooking="$emit('showBooking')" />
     <div id="gallery-container">
-      <img
-        v-for="image in images"
-        :key="image.name"
-        :src="image.src"
-        :alt="image.alt"
-        class="img-card"
-        @click="showModal"
-      />
+      <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
+        <cld-image :publicId="image.src" :alt="image.alt">
+          <cld-transformation
+            width="180"
+            height="250"
+            gravity="faces"
+            crop="fill"
+            quality="auto"
+            fetchFormat="auto"
+          />
+        </cld-image>
+      </div>
     </div>
     <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :image="selectedImage" />
     <ScrollDown @scrollDown="$emit('scrollDown')" />
@@ -35,63 +39,63 @@ export default {
       images: [
         {
           name: "gallery_1",
-          src: require("../../assets/gallery_1.jpg"),
+          src: "amu/gallery_1",
           alt: "gallery_1",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_2",
-          src: require("../../assets/gallery_2.jpg"),
+          src: "amu/gallery_2",
           alt: "gallery_2",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_3",
-          src: require("../../assets/gallery_3.jpg"),
+          src: "amu/gallery_3",
           alt: "gallery_3",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_4",
-          src: require("../../assets/gallery_4.jpg"),
+          src: "amu/gallery_4",
           alt: "gallery_4",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_5",
-          src: require("../../assets/gallery_5.jpg"),
+          src: "amu/gallery_5",
           alt: "gallery_5",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_6",
-          src: require("../../assets/gallery_6.jpg"),
+          src: "amu/gallery_6",
           alt: "gallery_6",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_7",
-          src: require("../../assets/gallery_7.jpg"),
+          src: "amu/gallery_7",
           alt: "gallery_7",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_8",
-          src: require("../../assets/gallery_8.jpg"),
+          src: "amu/gallery_8",
           alt: "gallery_8",
           stylist: "Tom",
           comment: "Permed beautifully."
         },
         {
           name: "gallery_9",
-          src: require("../../assets/gallery_9.jpg"),
+          src: "amu/gallery_9",
           alt: "gallery_9",
           stylist: "Tom",
           comment: "Permed beautifully."
@@ -121,12 +125,13 @@ export default {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   .img-card {
-    opacity: 0.8;
     width: 100%;
     height: 33vh;
-    place-self: center;
-    border-radius: 5px;
-    cursor: pointer;
+    img {
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   }
 }
 </style>
