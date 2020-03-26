@@ -3,9 +3,8 @@
     <Close @click.native="$emit('hideModal')"></Close>
     <div class="staff-card">
       <div class="staff-img">
-        <cld-image :publicId="targetSrc">
-          <cld-transformation radius="max" />
-          <cld-transformation height="160" crop="scale" />
+        <cld-image :publicId="`${targetSrc}.png`">
+          <cld-transformation width="160" height="160" gravity="face" radius="max" crop="thumb" />
         </cld-image>
       </div>
       <div class="staff-profile">

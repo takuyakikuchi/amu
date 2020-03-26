@@ -127,11 +127,7 @@ export default {
   .img-card {
     width: 100%;
     height: 33vh;
-    img {
-      width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 }
 </style>
