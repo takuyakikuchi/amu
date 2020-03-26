@@ -5,9 +5,10 @@
       <div class="model-img">
         <cld-image :publicId="targetSrc">
           <cld-transformation
-            width="180"
-            height="250"
-            gravity="faces"
+            width="300"
+            height="350"
+            gravity="face"
+            radius="75"
             crop="fill"
             quality="auto"
             fetchFormat="auto"

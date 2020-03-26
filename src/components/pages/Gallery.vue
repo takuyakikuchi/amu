@@ -5,9 +5,9 @@
       <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
         <cld-image :publicId="image.src" :alt="image.alt">
           <cld-transformation
-            width="180"
-            height="250"
-            gravity="faces"
+            width="190"
+            height="270"
+            gravity="face"
             crop="fill"
             quality="auto"
             fetchFormat="auto"
