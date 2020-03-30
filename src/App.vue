@@ -65,7 +65,13 @@ export default {
 body {
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background: rgb(50, 85, 80);
+  background: radial-gradient(
+    circle,
+    rgba(50, 85, 80, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
   .mobile-container {
     width: 350px;
     height: 100vh;
