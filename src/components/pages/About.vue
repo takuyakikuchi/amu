@@ -65,27 +65,27 @@ export default {
 @keyframes background-slide {
   0% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("https://res.cloudinary.com/dmxwje5he/image/upload/f_auto,q_auto/v1585126221/amu/about_1.jpg")
+      url("https://res.cloudinary.com/dmxwje5he/image/upload/c_fit,h_900,q_auto:eco,w_1300/v1585126221/amu/about_1.jpg")
         no-repeat center/cover;
   }
   25% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("https://res.cloudinary.com/dmxwje5he/image/upload/f_auto,q_auto/v1585126221/amu/about_1.jpg")
+      url("https://res.cloudinary.com/dmxwje5he/image/upload/c_fit,h_900,q_auto:eco,w_1300/v1585126221/amu/about_1.jpg")
         no-repeat center/cover;
   }
   25.01% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("https://res.cloudinary.com/dmxwje5he/image/upload/f_auto,q_auto/v1585126219/amu/about_2.jpg")
+      url("https://res.cloudinary.com/dmxwje5he/image/upload/c_fit,h_900,q_auto:eco,w_1300/v1585126219/amu/about_2.jpg")
         no-repeat center/cover;
   }
   50% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("https://res.cloudinary.com/dmxwje5he/image/upload/f_auto,q_auto/v1585126219/amu/about_2.jpg")
+      url("https://res.cloudinary.com/dmxwje5he/image/upload/c_fit,h_900,q_auto:eco,w_1300/v1585126219/amu/about_2.jpg")
         no-repeat center/cover;
   }
   50.01% {
     background: linear-gradient(rgba(47, 23, 15, 0.6), rgba(47, 23, 15, 0.6)),
-      url("https://res.cloudinary.com/dmxwje5he/image/upload/f_auto,q_auto/v1585126231/amu/about_3.jpg")
+      url("https://res.cloudinary.com/dmxwje5he/image/upload/c_fit,h_900,q_auto:eco,w_1300/v1585126231/amu/about_3.jpg")
         no-repeat center/cover;
   }
   75% {
