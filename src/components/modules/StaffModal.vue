@@ -8,7 +8,7 @@
         </cld-image>
       </div>
       <div class="staff-profile">
-        <p>name: {{staff.name}}</p>
+        <p>Name: {{staff.name}}</p>
         <p>position: {{staff.position}}</p>
         <p>Comment: {{staff.comment}}</p>
       </div>
