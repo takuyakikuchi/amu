@@ -43,8 +43,8 @@ export default {
     return {
       options: {
         licenseKey: "223B288E-330F4DFD-A035CABD-56DEC1F7",
-        anchors: ["home", "menu", "gallery", "staff", "about"],
-        scrollOverflow: true
+        anchors: ["home", "menu", "gallery", "staff", "about"]
+        // scrollOverflow: true
       },
       bookingShow: false
     };

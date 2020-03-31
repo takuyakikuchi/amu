@@ -5,8 +5,8 @@
       <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
         <cld-image :publicId="image.src" :alt="image.alt">
           <cld-transformation
-            width="190"
-            height="270"
+            width="200"
+            height="300"
             gravity="face"
             crop="fill"
             quality="auto"
@@ -78,28 +78,28 @@ export default {
           alt: "gallery_6",
           stylist: "Tom",
           comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_7",
+          src: "amu/gallery_7",
+          alt: "gallery_7",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_8",
+          src: "amu/gallery_8",
+          alt: "gallery_8",
+          stylist: "Tom",
+          comment: "Permed beautifully."
+        },
+        {
+          name: "gallery_9",
+          src: "amu/gallery_9",
+          alt: "gallery_9",
+          stylist: "Tom",
+          comment: "Permed beautifully."
         }
-        // {
-        //   name: "gallery_7",
-        //   src: "amu/gallery_7",
-        //   alt: "gallery_7",
-        //   stylist: "Tom",
-        //   comment: "Permed beautifully."
-        // },
-        // {
-        //   name: "gallery_8",
-        //   src: "amu/gallery_8",
-        //   alt: "gallery_8",
-        //   stylist: "Tom",
-        //   comment: "Permed beautifully."
-        // },
-        // {
-        //   name: "gallery_9",
-        //   src: "amu/gallery_9",
-        //   alt: "gallery_9",
-        //   stylist: "Tom",
-        //   comment: "Permed beautifully."
-        // }
       ]
     };
   },
@@ -120,15 +120,16 @@ export default {
   
 <style scoped lang="scss">
 #gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  display: flex;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  // grid-column-gap: 5px;
+  // grid-row-gap: 5px;
+  overflow-y: hidden;
+  overflow-x: scroll;
   .img-card {
-    justify-self: stretch;
-    width: 100%;
-    height: 33vh;
     cursor: pointer;
+    margin: 5px;
   }
 }
 </style>
