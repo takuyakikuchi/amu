@@ -78,28 +78,28 @@ export default {
           alt: "gallery_6",
           stylist: "Tom",
           comment: "Permed beautifully."
-        },
-        {
-          name: "gallery_7",
-          src: "amu/gallery_7",
-          alt: "gallery_7",
-          stylist: "Tom",
-          comment: "Permed beautifully."
-        },
-        {
-          name: "gallery_8",
-          src: "amu/gallery_8",
-          alt: "gallery_8",
-          stylist: "Tom",
-          comment: "Permed beautifully."
-        },
-        {
-          name: "gallery_9",
-          src: "amu/gallery_9",
-          alt: "gallery_9",
-          stylist: "Tom",
-          comment: "Permed beautifully."
         }
+        // {
+        //   name: "gallery_7",
+        //   src: "amu/gallery_7",
+        //   alt: "gallery_7",
+        //   stylist: "Tom",
+        //   comment: "Permed beautifully."
+        // },
+        // {
+        //   name: "gallery_8",
+        //   src: "amu/gallery_8",
+        //   alt: "gallery_8",
+        //   stylist: "Tom",
+        //   comment: "Permed beautifully."
+        // },
+        // {
+        //   name: "gallery_9",
+        //   src: "amu/gallery_9",
+        //   alt: "gallery_9",
+        //   stylist: "Tom",
+        //   comment: "Permed beautifully."
+        // }
       ]
     };
   },
@@ -125,6 +125,7 @@ export default {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   .img-card {
+    justify-self: stretch;
     width: 100%;
     height: 33vh;
     cursor: pointer;
