@@ -54,8 +54,10 @@ export default {
     justify-content: center;
     align-items: center;
     color: white;
+    text-shadow: 1px 1px 0 red;
     h1 {
       margin-bottom: 100px;
+      font-size: 1.5rem;
     }
     p {
       font-size: 1.5rem;

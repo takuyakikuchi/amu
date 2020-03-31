@@ -65,18 +65,13 @@ export default {
 body {
   width: 100%;
   height: 100vh;
-  background: rgb(50, 85, 80);
-  background: radial-gradient(
-    circle,
-    rgba(50, 85, 80, 1) 40%,
-    rgba(0, 0, 0, 1) 100%
-  );
-
+  background: rgb(0, 0, 0);
   .mobile-container {
     width: 350px;
     height: 100vh;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

@@ -31,6 +31,9 @@
           </tr>
         </tbody>
       </table>
+      <a href="https://beauty.hotpepper.jp/slnH000208931/coupon/" class="menu-detail-link">
+        <i class="fas fa-external-link-alt"></i> Menu detail
+      </a>
     </div>
     <ScrollDown @scrollDown="$emit('scrollDown')" />
   </div>
@@ -53,10 +56,15 @@ export default {
 #menu-background {
   background-color: #bfb8a0;
   table {
-    margin: auto;
     th {
       padding-bottom: 10px;
     }
+  }
+  .menu-detail-link {
+    margin-top: 32px;
+    font-size: 0.7em;
+    color: black;
+    text-decoration: underline;
   }
 }
 </style>
