@@ -36,7 +36,6 @@ export default {
   },
   data() {
     return {
-      normalScrollElements: ".gallery-container",
       modalShow: false,
       selectedImage: {},
       images: [
