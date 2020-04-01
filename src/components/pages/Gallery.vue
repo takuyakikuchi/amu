@@ -127,6 +127,7 @@ export default {
   // grid-row-gap: 5px;
   overflow-y: hidden;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   .img-card {
     cursor: pointer;
     margin: 5px;
