@@ -122,11 +122,13 @@ export default {
   
 <style scoped lang="scss">
 #gallery-container {
-  display: flex;
+  margin: 10px;
+  padding: 10px;
+  touch-action: pan-x;
   .image-container {
     display: flex;
+    overflow-y: hidden;
     overflow-x: scroll;
-    width: 100%;
     .img-card {
       cursor: pointer;
       margin: 5px;
