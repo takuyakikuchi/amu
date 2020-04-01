@@ -125,8 +125,10 @@ export default {
   // grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   // grid-column-gap: 5px;
   // grid-row-gap: 5px;
+  white-space: nowrap;
   overflow-y: hidden;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   .img-card {
     cursor: pointer;
