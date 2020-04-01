@@ -2,17 +2,19 @@
   <div>
     <Nav @showBooking="$emit('showBooking')" />
     <div id="gallery-container">
-      <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
-        <cld-image :publicId="image.src" :alt="image.alt">
-          <cld-transformation
-            width="200"
-            height="300"
-            gravity="face"
-            crop="fill"
-            quality="auto"
-            fetchFormat="auto"
-          />
-        </cld-image>
+      <div class="image-container">
+        <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
+          <cld-image :publicId="image.src" :alt="image.alt">
+            <cld-transformation
+              width="200"
+              height="300"
+              gravity="face"
+              crop="fill"
+              quality="auto"
+              fetchFormat="auto"
+            />
+          </cld-image>
+        </div>
       </div>
     </div>
     <GalleryModal @hideModal="modalShow = false" v-show="modalShow" :image="selectedImage" />
@@ -121,18 +123,14 @@ export default {
 <style scoped lang="scss">
 #gallery-container {
   display: flex;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  // grid-column-gap: 5px;
-  // grid-row-gap: 5px;
-  white-space: nowrap;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  .img-card {
-    cursor: pointer;
-    margin: 5px;
+  .image-container {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    .img-card {
+      cursor: pointer;
+      margin: 5px;
+    }
   }
 }
 </style>
