@@ -91,6 +91,7 @@ export default {
     filter: grayscale(1);
     .staff-name {
       color: rgba(255, 255, 255, 0.8);
+      text-shadow: 1px 1px black;
       margin: 5px;
       font-size: 1.2rem;
     }
