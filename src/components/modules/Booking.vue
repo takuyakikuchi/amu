@@ -5,7 +5,7 @@
       <h1 class="booking-title">Booking from below</h1>
       <p>
         <i class="fas fa-phone"></i>
-        <a href="tel:08043548606">xxxx-xx-xxxx</a>
+        <a href="tel:xxxxxxxxxx">xxxx-xx-xxxx</a>
       </p>
       <p>
         <i class="far fa-calendar-alt"></i>

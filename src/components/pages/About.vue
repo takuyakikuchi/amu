@@ -33,7 +33,7 @@
             <tr>
               <td>TEL</td>
               <td>
-                <a href="tel:08043548606">xxxx-xx-xxxx</a>
+                <a href="tel:xxxxxxxxxx">xxxx-xx-xxxx</a>
               </td>
             </tr>
             <tr>
