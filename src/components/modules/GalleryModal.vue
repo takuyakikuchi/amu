@@ -2,19 +2,7 @@
   <div class="modal">
     <Close @click.native="$emit('hideModal')"></Close>
     <div class="model">
-      <div class="model-img">
-        <cld-image :publicId="targetSrc">
-          <cld-transformation
-            width="300"
-            height="350"
-            gravity="face"
-            radius="75"
-            crop="fill"
-            quality="auto"
-            fetchFormat="auto"
-          />
-        </cld-image>
-      </div>
+      <div class="model-img" :style="background"></div>
       <div class="model-info">
         <p class="model-stylist">Stylist: {{image.stylist}}</p>
         <p class="model-comment">{{image.comment}}</p>
@@ -29,8 +17,8 @@ import Close from "../modules/Close.vue";
 export default {
   props: ["image"],
   computed: {
-    targetSrc() {
-      return this.image.src;
+    background() {
+      return `background: url(https://res.cloudinary.com/dmxwje5he/image/upload/c_fill,h_400,q_auto:eco,w_300/${this.image.src}.jpg) no-repeat center/cover;`;
     }
   },
   name: "GalleryModal",

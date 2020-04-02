@@ -5,14 +5,7 @@
       <div class="image-container">
         <div v-for="image in images" :key="image.name" class="img-card" @click="showModal">
           <cld-image :publicId="image.src" :alt="image.alt">
-            <cld-transformation
-              width="200"
-              height="300"
-              gravity="face"
-              crop="fill"
-              quality="auto"
-              fetchFormat="auto"
-            />
+            <cld-transformation width="200" height="300" crop="fill" quality="auto:eco" />
           </cld-image>
         </div>
       </div>
